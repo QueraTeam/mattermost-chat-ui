@@ -1,0 +1,53 @@
+/* Increase space between post boxes to improve readability */
+.post {
+    padding-top: 25px;
+}
+
+
+/* Apply UI changes to non-system posts to improve readability */
+.post:not(.post--system) .post__body {
+    max-width: 500px;
+}
+body.q--light-theme {
+    .post:not(.post--system) .post__body {
+        background: rgba(61, 60, 64, 0.06);
+        color: #111;  // Darker text color
+    }
+    .app__body .post:hover {
+        background: rgba(61, 60, 64, 0.03) !important;
+    }
+}
+body.q--dark-theme {
+    .post:not(.post--system) .post__body {
+        background: rgba(255, 255, 255, 0.08);
+        a {
+            color: rgb(90, 180, 255);
+        }
+    }
+}
+
+
+body.q--light-theme {
+    &.app__body .post:hover {
+        background: rgba(61, 60, 64, 0.03) !important;
+    }
+}
+
+
+/* Background color for current user's posts */
+body.q--light-theme .post.current--user .post__body {
+    background-color: #effdde !important;
+}
+body.q--dark-theme .post.current--user .post__body {
+    background-color: rgba(86, 164, 240, .3) !important;
+}
+.post.current--user:not(.post--compact) .post-image__columns,
+.post.current--user:not(.post--compact) .file-view--single {
+    background: none !important;
+}
+
+@media screen and (min-width: 769px) {
+    .post.same--root.same--user .post__header .col__reply {
+        top: -4px;
+    }
+}
