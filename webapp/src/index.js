@@ -8,9 +8,11 @@ class MattermostChatUIPlugin {
     }
 
     detectDarkTheme() {
-        const rgb = getComputedStyle(
-            document.getElementById('app-content')
-        ).backgroundColor.split('(')[1].split(')')[0].split(', ').map(Number);
+        const el = document.getElementById('app-content');
+        if (el === null)
+            return;
+        const rgb = getComputedStyle(el).backgroundColor
+            .split('(')[1].split(')')[0].split(', ').map(Number);
         const luma = 0.2126 * rgb[0] + 0.7152 * rgb[1] + 0.0722 * rgb[2];
         if (luma < 140) {
             document.body.classList.remove('q--light-theme');

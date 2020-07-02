@@ -7,6 +7,7 @@
 /* Apply UI changes to non-system posts to improve readability */
 .post:not(.post--system) .post__body {
     max-width: 500px;
+    padding: 0.3em 0.4em;
 }
 body.q--light-theme {
     .post:not(.post--system) .post__body {
