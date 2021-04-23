@@ -1,21 +1,36 @@
-/* Increase space between post boxes to improve readability */
+$image-width: 53px;
+$post-content-max-width: 540px;
+$post-content-border-radius: 6px;
+
+
 .post {
-    padding-top: 25px;
+    /* Increase space between post boxes to improve readability */
+    &[class*=other--] {
+        margin-top: 1.2em;
+    }
+
+    &:hover {
+        background: transparent !important;
+    }
+
+    .post__content {
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+    .post__body {
+        max-width: $post-content-max-width;
+        padding: 0.4em 0.8em !important;
+        border-radius: $post-content-border-radius;
+    }
+    .post__link {
+        max-width: $post-content-max-width;
+    }
 }
 
-
-/* Apply UI changes to non-system posts to improve readability */
-.post:not(.post--system) .post__body {
-    max-width: 500px;
-    padding: 0.3em 0.4em;
-}
 body.q--light-theme {
     .post:not(.post--system) .post__body {
-        background: rgba(61, 60, 64, 0.06);
-        color: #111;  // Darker text color
-    }
-    .app__body .post:hover {
-        background: rgba(61, 60, 64, 0.03) !important;
+        background: rgba(61, 60, 64, 0.04);
+        box-shadow: 0 2px 2px rgba(160, 172, 182, 0.5);
     }
 }
 body.q--dark-theme {
@@ -28,27 +43,22 @@ body.q--dark-theme {
 }
 
 
-body.q--light-theme {
-    &.app__body .post:hover {
-        background: rgba(61, 60, 64, 0.03) !important;
-    }
-}
-
-
-/* Background color for current user's posts */
+/* Current user's posts */
 body.q--light-theme .post.current--user .post__body {
-    background-color: #effdde !important;
+    background-color: rgba(239, 253, 222, .82) !important;
+    box-shadow: 0 2px 2px rgba(193, 218, 162, .75);
 }
 body.q--dark-theme .post.current--user .post__body {
     background-color: rgba(86, 164, 240, .3) !important;
 }
-.post.current--user:not(.post--compact) .post-image__columns,
-.post.current--user:not(.post--compact) .file-view--single {
-    background: none !important;
-}
 
+
+// Post Menus
 @media screen and (min-width: 769px) {
-    .post.same--root.same--user .post__header .col__reply {
-        top: -4px;
+    .post__header .post-menu {
+        top: auto !important;
+        bottom: 2px !important;
+        right: auto;
+        left: calc(#{$image-width} + #{$post-content-max-width} + 1em);
     }
 }

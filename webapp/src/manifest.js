@@ -5,7 +5,7 @@ const manifest = JSON.parse(`
     "id": "ir.quera.mattermost-chat-ui",
     "name": "Mattermost Chat UI",
     "description": "This plugin customizes chat boxes in Mattermost.",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "min_server_version": "5.12.0",
     "webapp": {
         "bundle_path": "webapp/dist/main.js"
