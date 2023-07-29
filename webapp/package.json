@@ -1,6 +1,6 @@
 {
   "name": "mattermost-chat-ui",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Customizes chat boxes in Mattermost.",
   "main": "src/index.js",
   "scripts": {
