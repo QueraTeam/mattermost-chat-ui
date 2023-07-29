@@ -12,18 +12,18 @@ and applies other UI customizations to Mattermost chat messages.
 ![after](screenshots/screenshot3.png)
 
 This repository is based on
-[mattermost/mattermost-plugin-starter-template](https://github.com/mattermost/mattermost-plugin-starter-template).
+[mattermost-plugin-starter-template](https://github.com/mattermost/mattermost-plugin-starter-template).
 
 ## Installation
 
-Download the plugin file (`ir.quera.mattermost-chat-ui-*.tar.gz`) from
+Download the plugin file (`ir.quera.mattermost-chat-ui-*.tar.gz`) from the
 [Releases](https://github.com/QueraTeam/mattermost-chat-ui/releases)
-page and upload to your Mattermost
-server via **System Console**.
+page and upload to your Mattermost server via **System Console**.
 
-## Other plugins:
+## Other Plugins
 
 - [mattermost-rtl](https://github.com/QueraTeam/mattermost-rtl)
+- [mattermost-vazirmatn](https://github.com/QueraTeam/mattermost-vazirmatn)
 
 ## Development, Build
 
