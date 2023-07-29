@@ -11,7 +11,7 @@ $post-content-border-radius: 6px;
 
     .post__body {
         max-width: $post-content-max-width;
-        padding: 0.3em 0.6em !important;
+        padding: 0.4em 0.8em 0.6em !important;
         border-radius: $post-content-border-radius;
 
         .post-collapse__show-more {
@@ -69,11 +69,15 @@ body.mm-chat-ui--dark-theme .post.current--user .post__body {
     margin-top: 6px;
     margin-bottom: 0;
     padding-left: 0;
+    padding-bottom: 0;
 
-    .indicator:empty {
-        width: 0;
-        padding-left: 0;
-        padding-right: 0;
+    .indicator {
+        height: unset;
+        padding: 0 8px 0 6px;
+
+        &:empty {
+            display: none;
+        }
     }
 }
 
@@ -83,4 +87,10 @@ body.mm-chat-ui--dark-theme .post.current--user .post__body {
     top: 2px;
     right: 2px;
     left: auto;
+}
+
+
+// HR
+.post__body .post-message__text-container .post-message__text hr {
+    margin: 0.6em 0;
 }
