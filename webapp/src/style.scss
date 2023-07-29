@@ -27,13 +27,13 @@ $post-content-border-radius: 6px;
     }
 }
 
-body.q--light-theme {
+body.mm-chat-ui--light-theme {
     .post:not(.post--system) .post__body {
         background: rgba(61, 60, 64, 0.04);
         box-shadow: 0 2px 2px rgba(160, 172, 182, 0.5);
     }
 }
-body.q--dark-theme {
+body.mm-chat-ui--dark-theme {
     .post:not(.post--system) .post__body {
         background: rgba(255, 255, 255, 0.08);
         a {
@@ -44,11 +44,11 @@ body.q--dark-theme {
 
 
 /* Current user's posts */
-body.q--light-theme .post.current--user .post__body {
+body.mm-chat-ui--light-theme .post.current--user .post__body {
     background-color: rgba(239, 253, 222, .82) !important;
     box-shadow: 0 2px 2px rgba(193, 218, 162, .75);
 }
-body.q--dark-theme .post.current--user .post__body {
+body.mm-chat-ui--dark-theme .post.current--user .post__body {
     background-color: rgba(86, 164, 240, .3) !important;
 }
 

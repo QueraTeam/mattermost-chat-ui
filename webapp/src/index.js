@@ -8,11 +8,11 @@ function detectDarkTheme() {
     .split('(')[1].split(')')[0].split(', ').map(Number);
   const luma = 0.2126 * rgb[0] + 0.7152 * rgb[1] + 0.0722 * rgb[2];
   if (luma < 140) {
-    document.body.classList.remove('q--light-theme');
-    document.body.classList.add('q--dark-theme');
+    document.body.classList.remove('mm-chat-ui--light-theme');
+    document.body.classList.add('mm-chat-ui--dark-theme');
   } else {
-    document.body.classList.remove('q--dark-theme');
-    document.body.classList.add('q--light-theme');
+    document.body.classList.remove('mm-chat-ui--dark-theme');
+    document.body.classList.add('mm-chat-ui--light-theme');
   }
 }
 
