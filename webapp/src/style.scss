@@ -3,25 +3,22 @@ $post-content-max-width: 540px;
 $post-content-border-radius: 6px;
 
 
-.post {
-    /* Increase space between post boxes to improve readability */
-    &[class*=other--] {
-        margin-top: 1.2em;
-    }
-
-    &:hover {
-        background: transparent !important;
-    }
-
+.post, .post-right__container .post, .ThreadViewer .post {
     .post__content {
         padding-top: 3px;
         padding-bottom: 3px;
     }
+
     .post__body {
         max-width: $post-content-max-width;
-        padding: 0.4em 0.8em !important;
+        padding: 0.3em 0.6em !important;
         border-radius: $post-content-border-radius;
+
+        .post-collapse__show-more {
+            padding-right: 0;
+        }
     }
+
     .post__link {
         max-width: $post-content-max-width;
     }
@@ -29,13 +26,14 @@ $post-content-border-radius: 6px;
 
 body.mm-chat-ui--light-theme {
     .post:not(.post--system) .post__body {
-        background: rgba(61, 60, 64, 0.04);
-        box-shadow: 0 2px 2px rgba(160, 172, 182, 0.5);
+        background: rgba(61, 60, 64, 0.04) !important;
+        //box-shadow: 0 2px 2px rgba(160, 172, 182, 0.5);
+        border: 1px solid rgba(160, 172, 182, 0.25);
     }
 }
 body.mm-chat-ui--dark-theme {
     .post:not(.post--system) .post__body {
-        background: rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.08) !important;
         a {
             color: rgb(90, 180, 255);
         }
@@ -43,10 +41,11 @@ body.mm-chat-ui--dark-theme {
 }
 
 
-/* Current user's posts */
+// Current user's posts
 body.mm-chat-ui--light-theme .post.current--user .post__body {
     background-color: rgba(239, 253, 222, .82) !important;
-    box-shadow: 0 2px 2px rgba(193, 218, 162, .75);
+    //box-shadow: 0 2px 2px rgba(193, 218, 162, .75);
+    border: 1px solid rgba(193,218,162,0.4);
 }
 body.mm-chat-ui--dark-theme .post.current--user .post__body {
     background-color: rgba(86, 164, 240, .3) !important;
@@ -61,4 +60,27 @@ body.mm-chat-ui--dark-theme .post.current--user .post__body {
         right: auto;
         left: calc(#{$image-width} + #{$post-content-max-width} + 1em);
     }
+}
+
+
+// Thread Footer
+.post__body .ThreadFooter {
+    position: unset;
+    margin-top: 6px;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    .indicator:empty {
+        width: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
+// OpenGraph Remove Button
+.post .PostAttachmentOpenGraph button.remove-button {
+    top: 2px;
+    right: 2px;
+    left: auto;
 }

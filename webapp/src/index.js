@@ -18,6 +18,7 @@ function detectDarkTheme() {
 
 class MattermostChatUIPlugin {
   initialize() {
+    detectDarkTheme();
     this.interval = setInterval(detectDarkTheme, 5000);
   }
 
